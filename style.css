@@ -1,0 +1,489 @@
+/* 共通 */
+body {
+    margin: 0;
+    font-family: "FuraCode Nerd Font", -apple-system, "system-ui", "system-ui", "Segoe UI", "Helvetica Neue", Arial, "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.continer {
+    padding: 0 16px;
+}
+
+/* header */
+#header {
+    /* 画面全体に表示させる */
+    min-height: 100vh;
+    /* 背景画像 */
+    background-image: url(img/mainvisual.jpeg);
+    /* 縦横比を維持して背景画像が要素いっぱいまで表示される */
+    background-size: cover;
+    /* 表示する場所 */
+    background-position: center top;
+    /* リピートさせるかどうか */
+    background-repeat: no-repeat;
+    padding: 20px 40px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#header nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header nav ul li {
+    margin-left: 30px;
+}
+
+#header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    filter: drop-shadow(1px 1px 2px #121212);
+}
+
+#header nav ul li a:hover {
+    color: #E03130;
+}
+
+#header .header-title {
+    padding: 0 16px;
+    text-align: center;
+    position: absolute;
+    top: 42%;
+    left: 0;
+    right: 0;
+    filter: drop-shadow(1px 1px 10px #c0c0c0);
+}
+
+#header .header-title img {
+    max-width: 100%;
+    width: 440px;
+    height: 100px;
+}
+
+/* main */
+#menu {
+    margin-bottom: 85px;
+}
+
+#menu .menu-title {
+    background-image: url(img/menu.jpg);
+    padding: 27px 0;
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+#menu .menu-title h2 {
+    color: #fff;
+    font-size: 33px;
+}
+
+#menu .sub-title {
+    margin: 0 auto;
+    width: 80px;
+    border-bottom: 5px solid #E03130;
+}
+
+#menu .sub-title2 {
+    margin: 0 auto;
+    width: 57px;
+    border-bottom: 5px solid #E03130;
+}
+
+#menu .sub-title3 {
+    margin: 0 auto;
+    width: 70px;
+    border-bottom: 5px solid #E03130;
+}
+
+#menu .sub-title h3 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#menu .sub-title2 h3 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#menu .sub-title3 h3 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#menu table {
+    border-collapse: separate;
+    border-spacing: 0 30px;
+}
+
+#menu table tr th {
+    font-weight: normal;
+    border-bottom: 1px dotted #000;
+    padding-right: 400px;
+}
+
+#menu table tr td {
+    padding-left: 40px;
+}
+
+/* about */
+#about .menu-title {
+    background-image: url(img/about.jpg);
+    padding: 27px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about .menu-title h2 {
+    color: #fff;
+    font-size: 33px;
+}
+
+#about .sub-title {
+    margin: 0 auto;
+    width: 75px;
+    border-bottom: 5px solid #E03130;
+    margin-bottom: 40px;
+}
+
+#about .sub-title h3 {
+    font-size: 20px;
+    padding-bottom: 5px;
+
+}
+
+#about p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+#about p + p {
+    margin-top: 40px;
+}
+
+#about .text {
+    margin-bottom: 63px;
+}
+
+#about .button-position {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#about a {
+    display: inline-block;
+    color: #000;
+}
+
+#about .button-position .button {
+    padding: 10px 40px;
+    position: relative;
+}
+
+.change-border::after,
+.change-border::before,
+.change-border_inner::after,
+.change-border_inner::before {
+    background-color: #E03130;
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 10;
+    transition: all .3s ease;
+}
+ 
+.change-border::after {
+    height: 2px;
+    left: -1px;
+    top: -1px;
+    width: 25px;
+}
+
+.change-border::before {
+    bottom: -1px;
+    height: 2px;
+    right: -1px;
+    width: 25px;
+}
+
+.change-border_inner::after {
+    top: -1px;
+    height: 25px;
+    left: -1px;
+    width: 2px;
+}
+
+.change-border_inner::before {
+    height: 25px;
+    right: -1px;
+    bottom: -1px;
+    width: 2px;
+}
+
+/* hover */
+.change-border:hover::after,
+.change-border:hover::before {
+    width: 100%;
+    width: calc(100% + 1px);
+}
+
+.change-border:hover .change-border_inner::after,
+.change-border:hover .change-border_inner::before {
+    height: 100%;
+    height: calc(100% + 1px);
+}
+
+/* location */
+#location .location-title {
+    background-image: url(img/location.jpg);
+    padding: 27px 0;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#location .location-title h2 {
+    color: #fff;
+    font-size: 33px;
+}
+
+#location .sub-title {
+    margin: 0 auto;
+    width: 115px;
+    border-bottom: 5px solid #E03130;
+    margin-bottom: 25px;
+}
+
+#location .sub-title h3 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#location .location-map {
+    margin-bottom: 35px;
+}
+
+#location p {
+    font-size: 14px;
+    margin: 0;
+}
+
+#location .text {
+    margin-top: 37px;
+    margin-bottom: 5px;
+}
+
+#location  .text2 {
+    margin-bottom: 10px;
+}
+
+#location  .text3 {
+    margin-bottom: 5px;
+}
+
+#location  .text4 {
+    margin-bottom: 10px;
+}
+
+#location .text5 {
+    margin-bottom: 92px;
+}
+
+footer {
+    text-align: center;
+}
+footer p {
+    font-size: 10px;
+}
+
+@media (min-width: 600px) {
+    /* menu */
+    #menu {
+        margin-bottom: 170px;
+    }
+
+    #menu .menu-title {
+        background-image: url('img/menu2.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        padding: 109px 0;
+    }
+
+    #menu .menu-title h2 {
+        font-size: 70px;
+    }
+
+    #menu .menu {
+        display: flex;
+        justify-content: center;
+        margin-top: 90px;
+    }
+
+    #menu .menu .coffee-position {
+        padding: 0 45px;
+    }
+
+    #menu .menu .food_other-position {
+        padding: 0 45px;
+    }
+
+    #menu .menu .coffee-position:first-child {
+        border-right: 1px solid #000;
+    }
+
+
+    #menu .menu .coffee-position .sub-title {
+        margin: 0 auto;
+        width: 150px;
+        border-bottom: 5px solid #E03130;
+        margin-bottom: 25px;
+    }
+
+    #menu .menu .coffee-position .sub-title h3 {
+        font-size: 40px;
+    }
+
+    #menu .menu .coffee-position table tr th {
+        font-size: 15px;
+        padding-right: 250px;
+    }
+
+    #menu .menu .coffee-position table tr td {
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+    #menu .menu .food_other-position .sub-title2 {
+        margin: 0 auto;
+        width: 113px;
+        border-bottom: 5px solid #E03130;
+        margin-bottom: 25px;
+    }
+
+    #menu .menu .food_other-position .sub-title2 h3 {
+        font-size: 40px;
+    }
+
+    #menu .menu .food_other-position .sub-title3 {
+        margin: 0 auto;
+        width: 135px;
+        border-bottom: 5px solid #E03130;
+        margin-top: 90px;
+        margin-bottom: 25px;
+    }
+
+    #menu .menu .food_other-position .sub-title3 h3 {
+        font-size: 40px;
+    }
+
+    #menu .menu .food_other-position table tr th {
+        font-size: 15px;
+        padding-right: 250px;
+    }
+
+    #menu .menu .food_other-position table tr td {
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+    /* about */
+    #about .menu-title {
+        background-image: url('img/about2.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        padding: 114px 0;
+    }
+
+    #about .menu-title h2 {
+        font-size: 60px;
+    }
+
+    #about .sub-title {
+        width: 150px;
+        margin-top: 110px;
+        margin-bottom: 98px;
+    }
+
+    #about .sub-title h3 {
+        font-size: 40px;
+    }
+
+    #about .text {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+
+    #about .text p {
+        font-size: 15px;
+    }
+
+    #about .text .text1 {
+        width: 440px;
+    }
+
+    #about .text .text2 {
+        width: 440px;
+    }
+
+    #about .button-position {
+        margin-top: 70px;
+        margin-bottom: 170px;
+    }
+
+    /* location */
+    #location .location-title {
+        background-image: url('img/location2.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        padding: 114px 0;
+    }
+
+    #location .sub-title {
+        width: 222px;
+    }
+
+    #location .sub-title h3 {
+        font-size: 40px;
+    }
+
+    #location .location-map {
+        width: 968px;
+        margin: 69px auto 180px auto;
+    }
+
+    #location .location-map .text {
+        margin-top: 37px;
+    }
+}
